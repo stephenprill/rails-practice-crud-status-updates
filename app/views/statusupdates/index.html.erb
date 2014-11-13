@@ -1,0 +1,12 @@
+<%= link_to "Add a Status Update", new_statusupdate_path %>
+
+<% @statusupdates.each do |statusupdate| %>
+
+  <%= link_to statusupdate.user, statusupdate_path(statusupdate) %>
+
+
+  <%= link_to 'Show', statusupdate_path(statusupdate) %>
+  <%= link_to 'Edit', edit_statusupdate_path(statusupdate) %>
+  <%= link_to 'Destroy', statusupdate, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<% end %>

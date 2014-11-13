@@ -1,0 +1,24 @@
+
+<%= form_for @statusupdate do |f| %>
+
+<% if @statusupdate.errors.any? %>
+  <h2> Errors </h2>
+  <ul>
+    <% @statusupdate.errors.full_messages.each do |message| %>
+    <li> <%= message %> </li>
+    <% end %>
+  </ul>
+  <% end %>
+
+<%= f.label :status %>
+<%= f.text_field :status %>
+
+<%= f.label :user %>
+<%= f.text_field :user %>
+
+<%= f.label :likes %>
+<%= f.number_field :likes %>
+
+<%= f.submit "Submit" %>
+
+<% end %>
